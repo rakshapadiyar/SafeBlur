@@ -34,23 +34,13 @@ SafeBlur is an automated image moderation solution designed to ensure a safe onl
 
 ### Installation
 
-1. Clone the repository:
+1. Create two buckets: one for original images (INPUT_BUCKET_NAME) and another for blurred images (BLURRED_BUCKET_NAME)
 
-   ```bash
-   git clone https://github.com/yourusername/safeBlur.git
-   cd safeBur
-
-   ```
-
-2. Create two buckets: one for original images (INPUT_BUCKET_NAME) and another for blurred images (BLURRED_BUCKET_NAME)
-
-3. Create Cloud Run Function with 2 environment variables ready.
+2. Create Cloud Run Function with 2 environment variables ready.
    INPUT_BUCKET_NAME : <your-input-bucket-name>
    BLURRED_BUCKET_NAME : <your-blurred-bucket-name>
    Edit the default entrypoint of the function to : blurOffensiveImages
    Write the function in blurOffensiveImages.js, save and deploy.
-
-### Test
 
 How It Works :
 
@@ -60,13 +50,13 @@ How It Works :
 4. Upload Blurred Image: The blurred image is uploaded to the Blurred Bucket.
 
 Example : Upload a violent image (a Zombie eating human brain),
-![Architecture Diagram](./upload.png)
-The Vision API classifies the image as inappropriate
-![Architecture Diagram](./logs.png)
-The blurred image is created and uploaded into the Output Image Bucket(opimg)
-![Architecture Diagram](./blurUpload.png)
-The blurred Image created and uploaded :
-![Architecture Diagram](./blurredImage.png)
+![Architecture Diagram](./upload.png)   
+The Vision API classifies the image as inappropriate   
+![Architecture Diagram](./logs.png)   
+The blurred image is created and uploaded into the Output Image Bucket(opimg)   
+![Architecture Diagram](./blurUpload.png)   
+The blurred Image created and uploaded :   
+![Architecture Diagram](./blurredImage.png)   
 
 
 ### Error Handling
@@ -80,3 +70,8 @@ The code includes error handling for:
 Efficiency: Automates the tedious process of content moderation.  
 Safety: Protects users by filtering out inappropriate content.  
 Scalability: Built on Google Cloud, the system can handle large volumes of images.
+
+### Conclusion
+SafeBlur is a robust and scalable solution that harnesses the power of Google Cloud Platform to create a safer online environment. By effectively detecting and blurring inappropriate content, SafeBlur helps protect users, especially children, from harmful material.
+
+This innovative solution can be seamlessly integrated into various applications and platforms, empowering developers and content creators to maintain a clean and user-friendly experience for their audiences. SafeBlur's contribution to a safer digital landscape is a significant step towards fostering a more positive and inclusive online community.
