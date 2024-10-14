@@ -12,7 +12,7 @@ SafeBlur is an automated image moderation solution designed to ensure a safe onl
 
 ## Architecture
 
-![Architecture Diagram](./architecture-diagram.png)
+![Architecture Diagram](./architecture.png)
 
 ### Components
 
