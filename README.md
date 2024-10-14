@@ -68,12 +68,12 @@ The blurred image is created and uploaded into the Output Image Bucket(opimg)
 The blurred Image created and uploaded :
 ![Architecture Diagram](./blurredImage.png)
 
-Error Handling
-The code includes error handling for:
 
-> Image analysis failures  
-> File download/upload issues  
-> Image processing errors
+### Error Handling
+The code includes error handling for:
+1. Image analysis failures  
+2. File download/upload issues  
+3. Image processing errors
 
 ### Benefits
 
